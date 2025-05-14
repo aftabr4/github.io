@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 8</title>
+    <style>
+        body {
+            font-family: Consolas, monospace;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Program 8</h1>
+    <pre>
+&lt;?php
+class Machine
+{
+    function __construct()
+    {
+        echo "Starting up...\n";
+    }
+
+    function __destruct()
+    {
+        echo "Shutting down...\n";
+    }
+}
+
+$m = new Machine();
+unset($m);
+?&gt;
+    </pre>
+</body>
+</html>

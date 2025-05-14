@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 6</title>
+    <style>
+        body {
+            font-family: Consolas, monospace;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Program 6</h1>
+    <pre>
+&lt;?php
+date_default_timezone_set("Asia/Kolkata");
+$h = date('G');
+if($h &gt;= 5 &amp;&amp; $h &lt;= 11)
+{
+    echo "good morning";
+}
+else if($h &gt;= 12 &amp;&amp; $h &lt;= 15)
+{
+    echo "good afternoon";
+}
+else if($h &gt;= 18 &amp;&amp; $h &lt;= 21)
+{
+    echo "good evening";
+}
+else
+{
+    echo "good night";
+}
+?&gt;
+    </pre>
+</body>
+</html>

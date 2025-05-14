@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 7</title>
+    <style>
+        body {
+            font-family: Consolas, monospace;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Program 7</h1>
+    <pre>
+&lt;?php
+function getGCD($a, $b)
+{
+    if ($b == 0)
+    {
+        return $a;
+    }
+    else
+    {
+        return getGCD($b, $a % $b);
+    }
+}
+function getLCM($a, $b)
+{
+    return ($a * $b) / getGCD($a, $b);
+}
+?&gt;
+
+&lt;?php
+if (!isset($_POST['submit']))
+{
+?&gt;
+&lt;form method="post" action="gcf_lcm.php"&gt;
+Enter two integers: &lt;br /&gt;&lt;input type="text" name="num_1" size="4" /&gt;
+&lt;p&gt;
+&lt;input type="text" name="num_2" size="4" /&gt;
+&lt;p&gt;
+&lt;input type="submit" name="submit" value="Submit" /&gt;
+&lt;/form&gt;
+&lt;?php
+}
+else
+{
+    $num1 = (int)$_POST['num_1'];
+    $num2 = (int)$_POST['num_2'];
+    echo "You entered: $num1, $num2";
+    echo "&lt;br /&gt;";
+    echo "The GCD of ($num1, $num2) is: " . getGCD($num1, $num2);
+    echo "&lt;br /&gt;";
+    echo "The LCM of ($num1, $num2) is: " . getLCM($num1, $num2);
+}
+?&gt;
+    </pre>
+</body>
+</html>

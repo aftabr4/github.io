@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 5</title>
+    <style>
+        body {
+            font-family: Consolas, monospace;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Program 5</h1>
+    <pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Array Manipulation Function&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;?php
+$a = array("red", "green", "blue");
+array_pop($a);
+print_r($a);
+?&gt;
+&lt;br/&gt;
+
+&lt;?php
+$a = array("red", "green");
+array_push($a, "blue", "yellow");
+print_r($a);
+?&gt;
+&lt;br/&gt;
+
+&lt;?php
+$a1 = array("red", "green");
+$a2 = array("blue", "yellow");
+print_r(array_merge($a1, $a2));
+?&gt;
+&lt;br/&gt;
+
+&lt;?php
+$a = array(5, 15, 25);
+echo array_sum($a);
+?&gt;
+&lt;br/&gt;
+
+&lt;?php
+$cars = array("Volvo", "BMW", "Toyota");
+echo count($cars);
+?&gt;
+&lt;br/&gt;
+
+&lt;?php
+$cars = array("Volvo", "BMW", "Toyota");
+echo sizeof($cars);
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>

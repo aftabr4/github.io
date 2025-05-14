@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 3</title>
+    <style>
+        body {
+            font-family: Consolas, monospace;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Program 3(PHP Code)</h1>
+    <pre>
+&lt;html&gt;
+&lt;body&gt;
+&lt;form method="post"&gt;
+&lt;input type="text" name="num1"/&gt;&lt;br&gt;
+&lt;input type="text" name="num2"/&gt;&lt;br&gt;
+&lt;input type="submit" name="submit" value="calculate"/&gt;&lt;br&gt;
+&lt;/form&gt;
+
+&lt;?php
+if(isset($_POST['submit']))
+{
+    $a = $_POST['num1'];
+    $b = $_POST['num2'];
+    echo "Addition=" . ($a + $b) . "&lt;br&gt;";
+    echo "Substraction=" . ($a - $b) . "&lt;br&gt;";
+    echo "Multiplication=" . ($a * $b) . "&lt;br&gt;";
+    echo "Division=" . ($a / $b) . "&lt;br&gt;";
+}
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
